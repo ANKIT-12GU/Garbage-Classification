@@ -10,7 +10,7 @@ This project focuses on developing a machine learning model to classify garbage 
 - [Confusion_matrix](#Confusion_matrix)
 - [Accuracy](#Accuracy)
 
-##Import_Libraries
+## Import_Libraries
 import numpy as np
 import pandas as pd
 import os
