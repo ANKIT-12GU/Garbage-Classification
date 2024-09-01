@@ -11,22 +11,22 @@ This project focuses on developing a machine learning model to classify garbage 
 - [Accuracy](#Accuracy)
 
 ## Import_Libraries
-- [import numpy as np]
-- [import pandas as pd]
-import os
-import cv2
-import matplotlib.pyplot as plt
-import seaborn as sns
-import tensorflow as tf
-import keras 
-from tqdm import tqdm
-from keras.callbacks import EarlyStopping,ModelCheckpoint
-from sklearn.metrics import confusion_matrix , accuracy_score
-from sklearn.metrics import classification_report
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import LabelEncoder
-import glob 
-import pandas as pan
-import matplotlib.pyplot as plotter
-import warnings
-warnings.filterwarnings('ignore')
+- import numpy as np
+- import pandas as pd
+- import os
+- import cv2
+- import matplotlib.pyplot as plt
+- import seaborn as sns
+- import tensorflow as tf
+- import keras 
+- from tqdm import tqdm
+- from keras.callbacks import EarlyStopping, ModelCheckpoint
+- from sklearn.metrics import confusion_matrix, accuracy_score
+- from sklearn.metrics import classification_report
+- from sklearn.model_selection import train_test_split
+- from sklearn.preprocessing import LabelEncoder
+- import glob 
+- import pandas as pan
+- import matplotlib.pyplot as plotter
+- import warnings
+- warnings.filterwarnings('ignore')
