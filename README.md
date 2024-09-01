@@ -30,3 +30,8 @@ This project focuses on developing a machine learning model to classify garbage 
 - import matplotlib.pyplot as plotter
 - import warnings
 - warnings.filterwarnings('ignore')
+
+  ## Read_Dataset
+  #Create Files_Name
+- image_data= '/kaggle/input/garbage-classification/garbage_classification'
+- pd.DataFrame(os.listdir(image_data),columns=['Files_Name'])
