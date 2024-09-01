@@ -35,3 +35,9 @@ This project focuses on developing a machine learning model to classify garbage 
   #Create Files_Name
 - image_data= '/kaggle/input/garbage-classification/garbage_classification'
 - pd.DataFrame(os.listdir(image_data),columns=['Files_Name'])
+
+  ## Visualization
+  - sns.countplot(x = dataframe["Label"])
+  - plotter.xticks(rotation = 50);
+  - ![image](https://github.com/user-attachments/assets/efed8845-e18b-4dfe-a2c8-efa00091f0e9)
+
