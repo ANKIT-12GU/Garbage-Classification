@@ -11,8 +11,8 @@ This project focuses on developing a machine learning model to classify garbage 
 - [Accuracy](#Accuracy)
 
 ## Import_Libraries
-import numpy as np
-import pandas as pd
+- [import numpy as np]
+- [import pandas as pd]
 import os
 import cv2
 import matplotlib.pyplot as plt
