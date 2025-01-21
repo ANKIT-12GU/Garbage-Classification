@@ -1,49 +1,55 @@
-# Garbage-Classification
-This project focuses on developing a machine learning model to classify garbage into multiple categories. The aim is to automate the sorting process by identifying the type of waste such as plastic, glass, paper, metal, or organic material based on the provided images. The project can serve as a stepping stone toward building more complex waste management systems that contribute to recycling and environmental sustainability.
+# Garbage Classification using Deep Learning
 
-## Table of Content
+This project involves the development and evaluation of a deep learning model to classify garbage into different categories. The goal is to aid in effective waste management and recycling by leveraging artificial intelligence.
 
-- [Read Dataset](#Read_Dataset)
-- [Visualization](#Visualization)
-- [Modeling](#Modeling)
-- [Confusion_matrix](#Confusion_matrix)
-- [Accuracy](#Accuracy)
+## Overview
 
-  ## Read_Dataset
-  #Create Files_Name
-- image_data= '/kaggle/input/garbage-classification/garbage_classification'
-- pd.DataFrame(os.listdir(image_data),columns=['Files_Name'])
+This project implements a Convolutional Neural Network (CNN) model to classify images of garbage into predefined categories. The model is trained, validated, and evaluated using labeled datasets.
 
-  ## Visualization
-  - sns.countplot(x = dataframe["Label"])
-  - plotter.xticks(rotation = 50);
-  - ![image](https://github.com/user-attachments/assets/efed8845-e18b-4dfe-a2c8-efa00091f0e9)
- 
-  ## Modeling
-  - base_model = tf.keras.applications.EfficientNetV2B1(input_shape=(224,224,3), include_top=False, weights='imagenet')
-  - base_model.trainable = False
-  - keras_model = keras.models.Sequential()
-  - keras_model.add(base_model)
-  - keras_model.add(keras.layers.Flatten()) 
-  - keras_model.add(keras.layers.Dropout(0.5))
-  - keras_model.add(keras.layers.Dense(12, activation=tf.nn.softmax))     # 12 classes
-  - keras_model.summary()
- 
-  ## Confusion_matrix
-  - ax = plt.subplot()
-  - CM = confusion_matrix(y_val, y_pred)
-  - sns.heatmap(CM, annot=True, fmt='g', ax=ax, cbar=False, cmap='RdBu')
-  - ax.set_xlabel('Predicted labels')
-  - ax.set_ylabel('True labels') 
-  - ax.set_title('Confusion Matrix')
-  - plt.show()
-  - CM
-  - ![image](https://github.com/user-attachments/assets/8504b495-fe38-4c41-b1ac-a443adde5936)
+## Features
 
-## Accuracy
-- Acc = accuracy_score(y_val, y_pred)
-- print("accuracy is: {0:.4f}%".format(Acc * 100))
-- accuracy is: 99.0654%
+- **Model Architecture**: Utilizes a sequential CNN built with TensorFlow and Keras.
+- **Performance**: Achieved an accuracy of **98.85%** on the validation dataset.
+- **Visualization**: Includes confusion matrix visualizations to analyze classification performance.
+- **Deployment**: The trained model is saved and can be loaded for further inference.
 
+## Workflow
 
+1. **Data Preprocessing**:
+   - Resized and normalized image data for model input.
+   - Split data into training, validation, and test sets.
 
+2. **Model Training**:
+   - Implemented a sequential CNN model.
+   - Optimized using appropriate loss functions and optimizers.
+
+3. **Evaluation**:
+   - Computed accuracy metrics.
+   - Visualized results using a confusion matrix.
+
+4. **Model Saving and Loading**:
+   - Saved the trained model using Python's `pickle` module.
+   - Reloaded the model for inference.
+
+## Libraries and Tools
+
+- Python 3
+- TensorFlow
+- Keras
+- NumPy
+- Matplotlib
+- Seaborn
+- Scikit-learn
+- Pickle
+
+## Results
+
+- **Accuracy**: The model achieved an accuracy of 98.85% on the validation dataset.
+- **Confusion Matrix**:
+  The confusion matrix highlights the performance across all categories, with minimal misclassifications.
+
+## How to Run
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/your-repo/garbage-classification.git
