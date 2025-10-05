@@ -9,7 +9,7 @@ This project implements a Convolutional Neural Network (CNN) model to classify i
 ## Features
 
 - **Model Architecture**: Utilizes a sequential CNN built with TensorFlow and Keras.
-- **Performance**: Achieved an accuracy of **98.85%** on the validation dataset.
+- **Performance**: Achieved an accuracy of **90.12%** on the validation dataset.
 - **Visualization**: Includes confusion matrix visualizations to analyze classification performance.
 - **Deployment**: The trained model is saved and can be loaded for further inference.
 
